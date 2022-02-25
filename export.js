@@ -6,6 +6,8 @@ exec('wasm-pack build', (err, stdout, stderr) => {
     if (stderr) console.log(stderr)
     if (stdout) console.log(stdout)
     if (!fs.existsSync('../static')) fs.mkdirSync('../static')
-    if (fs.existsSync('../static/wasm')) fs.rmdirSync('../static/wasm', {recursive: true})
-    if (fs.existsSync('./pkg')) fs.renameSync('./pkg', '../static/wasm')
+    if (fs.existsSync('./pkg')) {
+        if (fs.existsSync('../static/wasm')) fs.rmdirSync('../static/wasm', {recursive: true})
+        fs.renameSync('./pkg', '../static/wasm')
+    }
 })
