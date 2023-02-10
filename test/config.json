@@ -1,0 +1,18 @@
+[
+    {
+        "key": "PORT",
+        "value": 3331
+    },
+    {
+        "key": "HOST",
+        "value": "testing.samwagnermedia.com"
+    },
+    {
+        "key": "UPLOADAUTH",
+        "value": "Easy"
+    },
+    {
+        "key": "static",
+        "value": "./static"
+    }
+]

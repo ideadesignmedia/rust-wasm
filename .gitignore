@@ -1,2 +1,7 @@
 /target
 /pkg
+node_modules
+test/static
+test/errors
+test/visits
+scraper
